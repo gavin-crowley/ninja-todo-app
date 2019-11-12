@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const Todos = ({ todos, deleteTodo }) => {
+const Todos = ({todos, deleteTodo}) => {
+
   const todoList = todos.length ? (
     todos.map(todo => {
       return (
@@ -10,12 +11,14 @@ const Todos = ({ todos, deleteTodo }) => {
       )
     })
   ) : (
-    <p className="center">You have no todo's left, yay!</p>
+    <p className="center">You have no todos left, yay!</p>
   );
 
-  return <div className="todos collection">
-    {todoList}
-  </div>;
-};
+  return (
+    <div className="todos collection">
+      {todoList}
+    </div>
+  )
+}
 
 export default Todos;
